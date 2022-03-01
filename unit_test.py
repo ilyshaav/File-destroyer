@@ -31,8 +31,21 @@ class FilleTests(object):
             print("createfiles test false ")
             return False
         
+    def testDeleteFile():
+        for i in range(4):
+            if os.path.exists(str(i)+".txt"):
+                os.remove(str(i)+".txt")
+            else:
+                print("delete file test false ")
+                return False
+        print("delete file test pass ")
+        return True
+        
+                
+        
         
 #FilleTests.testCreateDir()
 FilleTests.testCreateFile()
+FilleTests.testDeleteFile()
 
     
