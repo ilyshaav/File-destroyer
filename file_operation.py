@@ -13,3 +13,6 @@ class FileOperation:
                 file.write(text+"\n")
             file.close()
         
+    def deleteFiles(nameOfFile):
+        if os.path.exists(nameOfFile):
+            os.remove(nameOfFile)  
