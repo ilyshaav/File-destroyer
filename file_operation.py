@@ -9,5 +9,7 @@ class FileOperation:
     def createFiles(countFiles,text):
         for i in range(int(countFiles)):
             file = open(str(i)+".txt", "w+")
+            for i in range(int(countFiles)):
+                file.write(text+"\n")
             file.close()
         
