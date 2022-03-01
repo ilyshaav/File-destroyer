@@ -6,4 +6,8 @@ class FileOperation:
     def createDir(nameOfDir):
         os.mkdir(nameOfDir)
 
-
+    def createFiles(countFiles,text):
+        for i in range(int(countFiles)):
+            file = open(str(i)+".txt", "w+")
+            file.close()
+        
