@@ -4,7 +4,7 @@ class FilleTests(object):
     def __init__(self):
         pass
     
-    def testCreateFile():
+    def testCreateDir():
         FileOperation.createDir('testCreateDir')
         if os.path.exists('testCreateDir'):
             print("createDir test pass ")
@@ -12,6 +12,17 @@ class FilleTests(object):
         else:
             print("createDir test false ")
             return False
-
+        
+    def testCreateFile():
+        FileOperation.createFiles(4,"test test test")
+        if os.path.exists('0.txt') and os.path.exists('1.txt') and os.path.exists('2.txt') and os.path.exists('3.txt'):
+            print("createfiles test pass ")
+            return True
+        else:
+            print("createfiles test false ")
+            return False
+        
+FilleTests.testCreateDir()
 FilleTests.testCreateFile()
+
     
