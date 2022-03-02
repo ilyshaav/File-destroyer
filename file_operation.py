@@ -22,7 +22,12 @@ class FileOperation:
         if int(commаnd) == 1:
             FileOperation.createDir(text)
             return True
+        elif int(commаnd) == 2:
+            FileOperation.createFiles(int(count),text)
+            return True
+            
         else:
             return False
+        
 
             
