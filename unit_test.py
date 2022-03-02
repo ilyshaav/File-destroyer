@@ -37,19 +37,31 @@ class FilleTests(object):
     def testDeleteFile():
         for i in range(4):
             if os.path.exists(str(i)+".txt"):
-                os.remove(str(i)+".txt")
+               FileOperation.deleteFile(str(i)+".txt")
             else:
                 print("delete file test false ")
                 return False
         print("delete file test pass ")
         return True
-
-      
+    
+    def testInterface():
+        cheсklist=[]
+        cheсklist[0] = FileOperation.interface(1,2,"testCreateDirInterface")
+        if cheсklist == [True]:
+            print("interface test pass ")
+            return True
+        else:
+            print("interface test false ")
+            return False
+        
+       
                 
         
         
-#FilleTests.testCreateDir()
+FilleTests.testCreateDir()
 FilleTests.testCreateFile()
 FilleTests.testDeleteFile()
+FilleTests.testDeleteFile()
+
 
     
