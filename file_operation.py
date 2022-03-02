@@ -19,6 +19,7 @@ class FileOperation:
             
     def interface(cmd, count, text):
         commаnd=cmd
+        countFiles=count
         if int(commаnd) == 1:
             FileOperation.createDir(text)
             return True
@@ -27,6 +28,10 @@ class FileOperation:
             return True
         elif int(commаnd) == 3:
             os.rmdir(text)
+            return True
+        elif int(commаnd) == 4:
+            for i in range(int(countFiles)):
+                FileOperation.deleteFile(str(i)+".txt")
             return True
         else:
             return False
