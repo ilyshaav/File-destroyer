@@ -45,8 +45,9 @@ class FilleTests(object):
         return True
     
     def testInterface():
-        cheсklist=[]
-        cheсklist[0] = FileOperation.interface(1,2,"testCreateDirInterface")
+        cheсklist=[False]
+        cheсklist[0] = FileOperation.interface('1','2',"testCreateDirInterface")
+        print(cheсklist[0])
         if cheсklist == [True]:
             print("interface test pass ")
             return True
@@ -58,10 +59,10 @@ class FilleTests(object):
                 
         
         
-FilleTests.testCreateDir()
+#FilleTests.testCreateDir()
 FilleTests.testCreateFile()
 FilleTests.testDeleteFile()
-FilleTests.testDeleteFile()
+FilleTests.testInterface()
 
 
     
