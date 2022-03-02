@@ -27,6 +27,9 @@ class FilleTests(object):
             and file3.read() == "test\ntest\ntest\ntest\n":
                 print("createfiles test pass ")
                 return True
+            else:
+                print("createfiles test false ")
+                return False
         else:
             print("createfiles test false ")
             return False
@@ -40,7 +43,8 @@ class FilleTests(object):
                 return False
         print("delete file test pass ")
         return True
-        
+
+      
                 
         
         
