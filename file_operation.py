@@ -13,6 +13,16 @@ class FileOperation:
                 file.write(text+"\n")
             file.close()
         
-    def deleteFiles(nameOfFile):
+    def deleteFile(nameOfFile):
         if os.path.exists(nameOfFile):
-            os.remove(nameOfFile)  
+            os.remove(nameOfFile)
+            
+    def interface(cmd, count, text):
+        commаnd=cmd
+        if int(commаnd) == 1:
+            FileOperation.createDir(text)
+            return True
+        else:
+            return False
+
+            
