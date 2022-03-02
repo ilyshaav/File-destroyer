@@ -35,6 +35,13 @@ class FileOperation:
             return True
         else:
             return False
-        
+run = 1
+print("команды: ")
+print("1 - создать папку")
+print("2 - создать файлы")
+print("3 - удалить папку")
+print("4 - удалить файлы")
 
+while (run):
+    FileOperation.interface(input("Введите команду: "),input("Введите кол-во: "), input("Введите текст: "))
             
