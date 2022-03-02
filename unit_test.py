@@ -45,10 +45,12 @@ class FilleTests(object):
         return True
     
     def testInterface():
-        cheсklist=[False, False]
+        cheсklist=[False, False, False]
         cheсklist[0] = FileOperation.interface('1','2',"testCreateDirInterface")
         cheсklist[1] = FileOperation.interface('2','3',"test Create text in files")
-        if cheсklist == [True]:
+        cheсklist[2] = FileOperation.interface('3','3',"testCreateDirInterface")
+        
+        if cheсklist == [True,True,True]:
             print("interface test pass ")
             return True
         else:
