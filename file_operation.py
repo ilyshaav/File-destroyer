@@ -25,7 +25,9 @@ class FileOperation:
         elif int(commаnd) == 2:
             FileOperation.createFiles(int(count),text)
             return True
-            
+        elif int(commаnd) == 3:
+            os.rmdir(text)
+            return True
         else:
             return False
         
